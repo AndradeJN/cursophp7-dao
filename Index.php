@@ -2,10 +2,39 @@
 
 require_once ("config.php");
 
-$sql = new Sql();
+/*Carrega apenas 1 usuario
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+$user = new Usuario();
+$user->loadById(3);
+echo $user;
 
-echo json_encode($usuarios);
+*/
+
+/*
+
+Carrega uma lista de usuarios
+
+$lista = Usuario::getList();
+
+echo json_encode($lista);
+
+*/
+
+/*
+
+Lista usuario pelo login
+
+$search = Usuario::search('jo');
+
+echo json_encode($search);
+
+
+*/
+
+$login = new Usuario();
+
+$login->login("JJ Token","senhordosaneis");
+
+echo $login;
 
 ?>
