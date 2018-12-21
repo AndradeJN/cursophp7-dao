@@ -31,12 +31,17 @@ echo json_encode($lista);
 
 
 
-/* $login = new Usuario();
+/* 
+
+
+$login = new Usuario();
 
 $login->login("user","123456");
 
 echo $login;
 */
+
+/* 
 
 $usuario = new usuario();
 
@@ -46,5 +51,16 @@ $usuario->update("Andrade", "picadasgalaxias");
 
 echo $usuario;
 
+*/
+
+$usuario = new Usuario();
+
+$usuario->loadById(1);
+
+$usuario->delete();
+
+echo $usuario;
+
+$usuario->delete();
 
 ?>
