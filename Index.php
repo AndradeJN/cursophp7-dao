@@ -20,21 +20,31 @@ echo json_encode($lista);
 
 */
 
-/*
-
-Lista usuario pelo login
-
-$search = Usuario::search('jo');
-
-echo json_encode($search);
 
 
-*/
 
-$login = new Usuario();
 
-$login->login("JJ Token","senhordosaneis");
+//$search = Usuario::search('A');
+
+//echo json_encode($search);
+
+
+
+
+/* $login = new Usuario();
+
+$login->login("user","123456");
 
 echo $login;
+*/
+
+$usuario = new usuario();
+
+$usuario->loadById(2);
+
+$usuario->update("Andrade", "picadasgalaxias"); 
+
+echo $usuario;
+
 
 ?>
